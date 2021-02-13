@@ -6,7 +6,6 @@
 
 
 
-1.
 # Opis projektu
 
 Niniejszy projekt jest implementacją aplikacji randkowej w języku c++. Aplikacja umożliwia użytkownikom zakładanie kont i wyszukiwanie użytkowników, których system uzna za potencjalnie interesujących dla danej osoby.Jeśli dana osoba zostanie dopasowana do użytkownika, wyświetlone zostaną jej dane osobowe i dane kontaktowe. Aplikacja umożliwia także edycję danych osobowych i ustawień. Każdy użytkownik może usunąć konto w dowolnym momencie. Program ma także funkcjonalność pracy w trybie administratora. Administrator może wyświetlać dane użytkowników i ich usuwać. Aplikacja działa w terminalu Windows/Linux.
