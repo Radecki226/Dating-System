@@ -10,23 +10,23 @@
 
 Niniejszy projekt jest implementacją aplikacji randkowej w języku c++. Aplikacja umożliwia użytkownikom zakładanie kont i wyszukiwanie użytkowników, których system uzna za potencjalnie interesujących dla danej osoby.Jeśli dana osoba zostanie dopasowana do użytkownika, wyświetlone zostaną jej dane osobowe i dane kontaktowe. Aplikacja umożliwia także edycję danych osobowych i ustawień. Każdy użytkownik może usunąć konto w dowolnym momencie. Program ma także funkcjonalność pracy w trybie administratora. Administrator może wyświetlać dane użytkowników i ich usuwać. Aplikacja działa w terminalu Windows/Linux.
 
-1.
+
 # Project description
 
 This project is an implementation of dating system in c++ programming language. Users can register and search for people considered by the system as interesing for them. If a particular person is matched to the user, they can see personal information of this person and contact details. User is allowed to edit their personal information and settings. Every account can be deleted by an user in any time. The program can be run in admin mode. Admin is permitted to see personal data of users and delete users. The application is running in Windows/Linux terminal.
 
-1.
+
 # Instrukcja użytkownika
 
 1. Interfejs użytkownika:
 
-W każdym menu użytkownikom wyświetlane są znaki w kwadratowych nawiasach i działania ułożone w listę. Aby wybrać dane działanie należy wpisać do terminala znak umieszczony w ramce obok tekstu wyrażającego działanie. Na przykład na fig. 1 użytkownik może zalogować się naciskając przycisk „1&quot;, założyć konto naciskając przycisk „2&quot; lub opuścic program wpisując dowolny inny znak lub sekwencję znaków.
+W każdym menu użytkownikom wyświetlane są znaki w kwadratowych nawiasach i działania ułożone w listę. Aby wybrać dane działanie należy wpisać do terminala znak umieszczony w ramce obok tekstu wyrażającego działanie. Na przykład użytkownik może zalogować się naciskając przycisk „1&quot;, założyć konto naciskając przycisk „2&quot; lub opuścic program wpisując dowolny inny znak lub sekwencję znaków.
 
-![](RackMultipart20210213-4-fhdr0p_html_d7ff4d8072dcf0a4.png) fig. 1
+![](RackMultipart20210213-4-fhdr0p_html_d7ff4d8072dcf0a4.png) 
 
 Jeśli użytkownik poda w jakimś menu dialogowym niepoprawne dane wejściowe, program może zapytać czy wyjśc do menu głównego informując o komendzie koniecznej do tego aby powrócić(fig. 2). Jeśli użytkownik poda tę komendę powróci do menu, każdy inny znak lub ciąg znaków zostanie potraktowany jako chęć pozostania w obecnym submenu.
 
-![](RackMultipart20210213-4-fhdr0p_html_979a64ed954b2ec6.png) fig. 2
+![](RackMultipart20210213-4-fhdr0p_html_979a64ed954b2ec6.png) 
 
 Wszystkie ekrany opisane poźniej korzystają z tego formatu interfejsu.
 
