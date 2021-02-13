@@ -1,29 +1,10 @@
 | ![](RackMultipart20210213-4-fhdr0p_html_56196db211ff095c.jpg)
 
- |
-## **AKADEMIA GÓRNICZO-HUTNICZA**
- |
-| --- | --- |
 
-# Dokumentacja do projektu
 
-# **Aplikacja Randkowa**
+# Dating System
 
-z przedmiotu
 
-## **Języki programowania obiektowego**
-
-Elektronika i Telekomunikacja
-
-3 rok
-
-_Piotr Radecki_
-
-poniedziałek 17:50
-
-prowadzący: Rafał Frączek
-
-6 stycznia 2020
 
 1.
 # Opis projektu
