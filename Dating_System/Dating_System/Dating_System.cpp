@@ -74,8 +74,8 @@ class User {
     struct search_settings m_settings;
 
 public:
+    
     //konstruktor
-
     User(string login, string email, string password, string name, vector<string> hobbies
         , int age, string gender, search_settings settings);
 
@@ -246,6 +246,7 @@ public:
     //inne metody
     
     void find_matches(int idx);
+    void find_user(int age_min, int age_max , string hobby);
     void add_user(User user);
     void remove_user(int idx);
     void print_user(int idx);
@@ -475,6 +476,18 @@ void Dataset::find_matches(int idx) { //idx bedzie indeksem uzytkownika
     }
     m_users[idx].set_matches(matches); //ustawia wypelniony wektor jako matche uzytkownika idx
 
+}
+void Dataset::find_user(int age_min, int age_max, string hobby) {
+    for (size_t i = 0; i < m_users.size(); i++) {
+        if (m_users[i].get_age() > age_min && m_users[i].get_age() < age_max && (m_users[i].get_hobbies()[0] == hobby ||
+            m_users[i].get_hobbies()[1] == hobby || m_users[i].get_hobbies()[1] == hobby)) {
+
+            std::cout << "----------------" << endl;
+            m_users[i].print_data();
+            std::cout << "----------------" << endl;
+
+        }
+    }
 }
 
 void Dataset::add_user(User user) {
@@ -707,6 +720,48 @@ int edit_menu(Dataset& dataset, int user_idx) {
 
     }
     return 0;
+}
+int search(Dataset& dataset) {
+    /*
+    Procedura wyszukiwania użytkowników
+    Pyta użytkownika o kryteria wyszukiwania i wyświetla listę użytkowników spełniających te kryteria
+    */
+    int age_min;
+    int age_max;
+    string hobby;
+    int error_flag = 0;
+
+
+    std::cout << "Type minimum age: "; std::cin >> age_min;
+
+    if (cin.fail())
+        error_flag = 1;
+    std::cin.clear();
+    std::cin.ignore(1000, '\n');
+    if (error_flag)
+        return -1;
+
+    
+    std::cout << "Type maximum age: "; std::cin >> age_max;
+
+    if (cin.fail())
+        error_flag = 1;
+    std::cin.clear();
+    std::cin.ignore(1000, '\n');
+    if (error_flag)
+        return -1;
+
+
+
+    std::cout << "Type hobby: "; std::cin >> hobby;
+    std::cin.clear();
+    std::cin.ignore(1000, '\n');
+    std::cout << "Found users: " << endl;
+    dataset.find_user(age_min, age_max, hobby);
+    return 0;
+
+
+  
 }
 
 int login_procedure(Dataset &dataset) {
@@ -985,6 +1040,7 @@ void user_panel(Dataset &dataset , int user_idx) {
 
         std::cout << "[1] Edit Account" << endl;
         std::cout << "[2] Show matches" << endl;
+        std::cout << "[3] Search for users" << endl;
         std::cout << "[Anything else] Exit" << endl;
         std::cout << "Type the digit:"; std::cin >> control;
         std::cin.clear();
@@ -999,6 +1055,12 @@ void user_panel(Dataset &dataset , int user_idx) {
             dataset.find_matches(user_idx);
             dataset.print_matches(user_idx);
             break;
+        case 3: {
+            int n = search(dataset);
+            if (n == -1)
+                std::cout << "Wrong character" << endl;
+            break;
+        }
         default:
             ok = 1;
             return;
